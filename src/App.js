@@ -1,8 +1,10 @@
 import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+
+import './App.css';
+
 import HomePage from './pages/Homepage/HomePage.component';
 import ShopPage from './pages/Shop/ShopPage.component';
-import './App.css';
-import { Route, Switch } from 'react-router-dom';
 import Header from './components/Header/Header.component';
 import SignInUp from './pages/SignInUp/SignInUp.component';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
@@ -37,7 +39,6 @@ class App extends React.Component {
       this.setState({ currentUser: userAuth });
     });
   }
-
   // componentWillUnmount() {
   //   this.unsubscribeFromAuth();
   // }
